@@ -17,10 +17,23 @@
     - `npm run dev` to start a dev server
     - `npm run build` to build for production
     - `npm run serve` to preview the production build
-<!-- 8. Linting & Formatting \
-    - `npm install --save-dev eslint @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint-config-prettier eslint-config-standard-with-typescript eslint-plugin-import eslint-plugin-n eslint-plugin-prettier eslint-plugin-promise eslint-plugin-react eslint-plugin-unused-imports prettier prettier-plugin-tailwindcss` to install ESLint and Prettier
-    - `npm init @eslint/config` to create a .eslintrc.js file -->
-9. Husky and lint-staged \
+8. Linting & Formatting \
+    - `npm install eslint --save-dev` to install ESLint
+    - `npm install prettier --save-dev` to install Prettier
+    - create a .prettierrc file and add the following:
+    ```json
+    {
+        "semi": true,
+        "trailingComma": "all",
+        "singleQuote": true,
+        "printWidth": 80,
+        "tabWidth": 4
+    }
+    ```
+    - `npm install eslint-plugin-prettier --save-dev` to install eslint-plugin-prettier
+    - `npm install eslint-config-prettier --save-dev` to install eslint-config-prettier
+    - update .eslintrc.cjs file to include the extends 'plugin:prettier/recommended'
+9. Husky and lint-staged
     - `npm install --save-dev husky lint-staged` to install Husky and lint-staged
     - `npx husky install` to install Husky hooks
     - `npx husky add .husky/pre-commit "npx lint-staged"` to add a pre-commit hook \
