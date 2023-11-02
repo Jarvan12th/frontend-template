@@ -17,10 +17,13 @@
     - `npm run dev` to start a dev server
     - `npm run build` to build for production
     - `npm run serve` to preview the production build
-8. Linting & Formatting \
+<!-- 8. Linting & Formatting \
     - `npm install --save-dev eslint @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint-config-prettier eslint-config-standard-with-typescript eslint-plugin-import eslint-plugin-n eslint-plugin-prettier eslint-plugin-promise eslint-plugin-react eslint-plugin-unused-imports prettier prettier-plugin-tailwindcss` to install ESLint and Prettier
-    - `npm init @eslint/config` to create a .eslintrc.js file
+    - `npm init @eslint/config` to create a .eslintrc.js file -->
 9. Husky and lint-staged \
     - `npm install --save-dev husky lint-staged` to install Husky and lint-staged
     - `npx husky install` to install Husky hooks
-    - `npx husky add .husky/pre-commit "npx lint-staged"` to add a pre-commit hook
+    - `npx husky add .husky/pre-commit "npx lint-staged"` to add a pre-commit hook \
+    if it says "No valid configuration found." then follow the instructions to fix it
+    - `rm -rf .git/hooks` to remove the .git/hooks folder
+    - `npx husky install --save-dev` to reinstall Husky hooks
